@@ -1,0 +1,264 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/code-alt-regular-24 (1).png" type="image/x-icon">
+    <link href="./output.css" rel="stylesheet">
+    <!-- Title -->
+    <title>My Portfolio</title>
+    <!-- Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Script -->
+    <script defer src="./main.js"></script>
+
+</head>
+<body class="bg-black font-poppiens text-white scroll-behaviour-smooth">
+
+    <!-- Indicatore -->
+    <div class="fixed bottom-4 right-4 size-12 md:bottom-6 md:right-6 md:size-16 cursor-pointer p-1 rounded-full z-20 transition-all duration-500 translate-x-[150%]"
+        id="indicatore">
+        <div class="bg-red w-full h-full rounded-full grid place-content-center"><i
+                class='bx bxs-chevron-up text-lg md:text-2xl'></i></div>
+    </div>
+
+    <!-- Header -->
+    <header class=" py-4  ">
+        <div class=" mx-auto container px-6 ">
+            <nav class="flex justify-between items-center">
+                <!-- Title -->
+                <h1 class="text-2xl md:text-3xl first-letter:text-red font-medium text-white">My Portfolio.</h1>
+                <!-- Navbar -->
+                <ul class="lg:flex space-x-10 hidden">
+                    <li class="text-xl list-none"><a href="#home"
+                            class="underlineEffect text-white no-underline ">Home</a>
+                    </li>
+                    <li class="text-xl list-none"><a href="#contactMe"
+                            class="underlineEffect text-white no-underline">Contact
+                            me</a>
+                    </li>
+                    <li class="text-xl list-none"><a href="#works"
+                            class="underlineEffect text-white no-underline">Works</a>
+                    </li>
+                    <li class="text-xl list-none"><a href="#skills"
+                            class="underlineEffect text-white no-underline">skills</a>
+                    </li>
+                </ul>
+                <!-- Menu Icon -->
+                <article class="lg:hidden " id="menubar">
+                    <i class='bx bx-menu-alt-right text-white cursor-pointer text-4xl md:text-5xl  '></i>
+                </article>
+            </nav>
+        </div>
+        <!-- Mobile Menu-->
+        <ul class="transform right-[-300px] fixed top-0 h-full w-[300px] rounded-l-2xl space-y-6 bg-gradient-to-b from-red to-[rgb(0, 0, 0, .8)] transition-all duration-300 z-50 pt-28 px-8"
+            id="mobile-menu">
+            <!-- close button -->
+            <article class="absolute right-12 top-6 cursor-pointer hover:scale-110 transition">
+                <i class='bx bx-x text-5xl text-white' id="close-btn"></i>
+            </article>
+
+            <li class="text-xl list-none"><a href="#home" class="text-white 
+                hover:px-3 shadow-md transition-all duration-300 rounded-r-lg text-xl px-6">Home</a>
+            </li>
+            <li class="text-xl list-none"><a href="#contactMe" class="text-white 
+                hover:px-3 shadow-md transition-all duration-300 rounded-r-lg text-xl px-6">Contact me</a>
+            </li>
+            <li class="text-xl list-none"><a href="#works" class="text-white 
+                hover:px-3 shadow-md transition-all duration-300 rounded-r-lg text-xl px-6">Works</a>
+            </li>
+            <li class="text-xl list-none"><a href="#skills" class="text-white 
+                hover:px-3 shadow-md transition-all duration-300 rounded-r-lg text-xl px-6">Skills</a>
+            </li>
+        </ul>
+    </header>
+
+
+    <main>
+        <!-- Hero -->
+        <section class="mx-auto container px-6 relative pt-32 md:pt-42" id="home">
+            <div class="flex flex-col-reverse md:flex-row justify-center">
+                <!-- Title -->
+                <div class="md:w-1/2 p-8 lg:py-24 lg:px-16 text-center md:text-left space-y-3 ">
+                    <h2 class="text-[7wv] md:text-3xl lg:text-5xl text-nowrap">Hello, I'm Mehran </h2>
+
+                    <div>
+                        <p class="lg:text-4xl text-2xl">I'm
+                            <span id="job" class="text-red font-medium"></span>
+                        </p>
+                        <article class="flex items-center space-x-3 justify-center md:justify-start ">
+                            <a href="#works" class="mt-14 block text-lg text-center">See more
+                                <i class='bx bx-down-arrow-alt'></i>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+                <!-- Hero image -->
+                <div class="md-w-1/2 ">
+
+                    <img src="images/me.png" alt="MyImage"
+                        class="w-9/12 block rounded-full mx-auto shadow-sm shadow-red">
+                </div>
+            </div>
+            <!-- bubble -->
+            <div class="hidden lg:block absolute size-64 left-0 blur-[300px] rounded-full top-30 bg-red -z-100">
+            </div>
+        </section>
+
+
+
+        <!-- Works-->
+        <section class="mx-auto container px-6 py-28 relative" id="works">
+            <h2 class="text-3xl md:text-4xl first-letter:text-red font-medium text-white pb-14">Works</h2>
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 max-w-6xl mx-auto gap-8 justify-center">
+                <!-- Projects -->
+                <!-- 1 -->
+                <article class=" group relative max-w-[350px] h-[400px] md:w-auto mx-auto ">
+                    <img src="images/calculator.png" class="object-center w-full h-full rounded-xl ">
+                    <!-- Layer -->
+                    <div
+                        class="absolute left-0 bottom-0 bg-gradient-to-b from-black/50 to-red w-full rounded-xl h-0 overflow-hidden transition-all duration-500 group-hover:h-full flex justify-center items-center flex-col space-y-16">
+                        <p class="text-2xl transform -skew-y-4">Calculator</p>
+                        <a href="https://light-calculator.vercel.app/" target="_blank"
+                            class="text-xl transform font-medium">Live
+                            Demo</a>
+                    </div>
+                </article>
+
+                <!-- 2 -->
+                <article class=" group relative max-w-[350px] h-[400px] md:w-auto mx-auto ">
+                    <img src="images/clock.png" alt="img" class="object-cover w-full h-full rounded-xl ">
+                    <!-- Layer -->
+                    <div
+                        class="absolute left-0 bottom-0 bg-gradient-to-b from-black/50 to-red w-full rounded-xl h-0 overflow-hidden transition-all duration-500 group-hover:h-full flex justify-center items-center flex-col space-y-16">
+                        <p class="text-2xl transform -skew-y-4">Analog clock</p>
+                        <a href="https://analog-clock-gold-phi.vercel.app/" target="_blank"
+                            class="text-xl transform font-medium">Live
+                            Demo</a>
+                    </div>
+                </article>
+
+                <!-- 3 -->
+                <article class=" group relative max-w-[350px] h-[400px] md:w-auto mx-auto ">
+                    <img src="images/passGen.png" alt="img" class="object-center w-full h-full rounded-xl ">
+                    <!-- Layer -->
+                    <div
+                        class="absolute left-0 bottom-0 bg-gradient-to-b from-black/50 to-red w-full rounded-xl h-0 overflow-hidden transition-all duration-500 group-hover:h-full flex justify-center items-center flex-col space-y-16">
+                        <p class="text-2xl transform -skew-y-4">Passwor dGeneratore</p>
+                        <a href="https://password-generatore.vercel.app/" target="_blank"
+                            class="text-xl transform font-medium">Live
+                            Demo</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <button
+                class=" block mx-auto px-10 py-2 md:px-14 md:py-3 rounded-md mt-7 text-lg transition transform hover:translate-y-1 cursor-pointer  bg-red">See
+                more</button>
+            <div class="hidden lg:block absolute size-64 right-10 blur-[300px] rounded-full bottom-10 bg-red -z-100">
+                12
+            </div>
+        </section>
+
+
+        <!-- Skills-->
+        <section class="mx-auto container px-6 py-28 relative" id="skills">
+            <h2 class="text-3xl md:text-4xl first-letter:text-red font-medium text-white pb-14">Skills</h2>
+            <picture class="flex justify-center items-center flex-wrap gap-2 md:gap-10  ">
+                <!-- skills 1 -->
+                <article class="bg-dark p-4 flex flex-col items-center space-y-4 rounded-sm">
+                    <img class="w-26 transform transition hover:scale-105 " src="images/html-icon.webp" alt="html-icon">
+                    <small class="text-lg tracking-wide font-medium">HTML</small>
+                </article>
+                <!-- skills 2 -->
+                <article class="bg-dark p-4 flex flex-col items-center space-y-4 rounded-sm">
+                    <img class="w-26 transform transition hover:scale-105" src="images/css-icon.webp" alt="css-icon">
+                    <small class="text-lg tracking-wide font-medium">CSS</small>
+                </article>
+                <!-- skills 3 -->
+                <article class="bg-dark p-4 flex flex-col items-center space-y-4 rounded-sm">
+                    <img class="w-26 transform transition hover:scale-105"
+                        src="images/javascript-programming-language-icon.webp" alt="js-icon">
+                    <small class="text-lg tracking-wide font-medium">Javascript</small>
+                </article>
+
+                <!-- skills 4 -->
+                <article class="bg-dark p-4 flex flex-col items-center space-y-4 rounded-sm">
+                    <img class="w-26 transform transition hover:scale-105" src="images/visual-studio-code-icon.webp"
+                        alt="vscode-icon">
+                    <small class="text-lg tracking-wide font-medium">Vs code</small>
+                </article>
+                <!-- skills 5 -->
+                <article class="bg-dark p-4 flex flex-col items-center space-y-4 rounded-sm">
+                    <img class="w-26 transform transition hover:scale-105" src="images/tailwind-css-icon.webp"
+                        alt="tailwind-css-icon">
+                    <small class="text-lg tracking-wide font-medium">Tailwind</small>
+                </article>
+                <!-- skills 6 -->
+                <article class="bg-dark p-4 flex flex-col items-center space-y-4 rounded-sm">
+                    <img class="w-26 transform transition hover:scale-105" src="images/figma-icon.webp"
+                        alt="tailwind-css-icon">
+                    <small class="text-lg tracking-wide font-medium">Figma</small>
+                </article>
+
+            </picture>
+
+            <!-- Bubble -->
+            <div class="hidden lg:block absolute size-64 left-10 blur-[300px] rounded-full bottom-10 bg-red -z-100">
+                12
+            </div>
+        </section>
+
+
+        <!-- Contact me -->
+        <section class="mx-auto container px-6 py-28 relative" id="contactMe">
+            <h2 class="text-3xl md:text-4xl first-letter:text-red font-medium text-white pb-14">Contact <span
+                    class="first-letter:text-red inline-block">me</span></h2>
+
+            <div class="max-w-6xl">
+                <!-- Form -->
+                <form class="mx-auto lg:w-4/6  flex flex-col space-y-5">
+                    <input class="py-5 border-none outline-none px-4 rounded-sm bg-dark caret-red" type="text"
+                        placeholder="Name">
+                    <input class="py-5 border-none outline-none px-4 rounded-sm bg-dark caret-red" type="email"
+                        placeholder="Email">
+                    <textarea rows="6" class="border-none outline-none p-4 rounded-sm bg-dark caret-red resize-none"
+                        placeholder="Message"></textarea>
+                    <button
+                        class="block mx-auto px-10 py-2 md:px-14 md:py-3 rounded-md mt-7 text-lg transition transform hover:translate-y-1 cursor-pointer  bg-red">Submit</button>
+                </form>
+            </div>
+
+            <!-- Bubble -->
+            <div class=" absolute size-42 right-10 blur-[200px] rounded-full bottom-0 bg-red -z-100">
+                12
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="px-10 h-12 mt-20 flex flex-col items-center justify-center md:flex-row md:justify-between">
+        <!-- Social media icons -->
+        <article class="flex items-center space-x-3 mb-4">
+            <a href="https://t.me/DeveloperBoyy" target="_blank"><i
+                    class='bx bxl-telegram text-2xl cursor-pointer transition hover:text-blue-500 transform hover:-translate-y-2 hover:scale-110'></i></a>
+            <a href="https://www.instagram.com/mehran_7_10" target="_blank"><i
+                    class='bx bxl-instagram text-2xl cursor-pointer transition hover:text-red transform hover:-translate-y-2 hover:scale-110'></i></a>
+            <a href="https://www.whatsapp.com/mehran" target="_blank"><i
+                    class='bx bxl-whatsapp text-2xl cursor-pointer transition hover:text-green-500 transform hover:-translate-y-2 hover:scale-110'></i></a>
+            <a href="https://github.com/" target="_blank"><i
+                    class='bx bxl-github text-2xl cursor-pointer transition transform hover:-translate-y-2 hover:scale-110'></i></a>
+
+        </article>
+
+        <!-- Fotter text -->
+        <small class="tracking-wide text-md font-medium flex items-center space-x-4">Created by Mehran <i
+                class='bx bxs-heart text-red'></i></small>
+        <small class="tracking-wide text-md font-medium">mehranmohamdi1311@gmail.com</small>
+    </footer>
+</body>
+
+</html>
